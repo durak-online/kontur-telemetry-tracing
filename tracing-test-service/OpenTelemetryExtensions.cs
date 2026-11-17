@@ -24,12 +24,12 @@ public static class OpenTelemetryExtensions
                 {
                     var name = typeof(Program).Assembly.GetName();
                     rb.AddService(
-                        serviceName: "ke-conf-otel-mc-example-service",
+                        serviceName: "ABOBA_3_SPIDOMETER_3.0",
                         serviceVersion: name.Version!.ToString(),
                         autoGenerateServiceInstanceId: true);
                     rb.AddEnvironmentVariableDetector();
                 })
-                .AddSource("tracing_test_service")
+                .AddSource("ABOBA_3_SPIDOMETER_3.0")
                 .AddHttpClientInstrumentation();
         });
 }
